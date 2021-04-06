@@ -1,0 +1,54 @@
+{
+    "um":{
+        "name": "Matematica 3º Ano D",
+        "activities": {
+            "1": {
+                "name": "Atividade de fixação",
+                "description": "lorem iepslumsdsdas",
+                "activityType": "checkbox",
+                "activityAnswer": "22",
+                "activityAlternatives": ["10","21", "22", "40"]
+            },
+            "2": {
+                "name": "Atividade de fixação",
+                "description": "lorem iepslumsdsdas",
+                "activityType": "inputblock",
+                "activityAnswer": "5X+2=X",
+                "activityAlternatives": []
+            }
+        },
+        "teachers": [
+            "1"
+        ]
+    },
+    "dois":{
+        "name": "Quimica 3º Ano D",
+        "activities": {
+            "1": {
+                "name": "Atividade de fixação",
+                "description": "lorem iepslumsdsdas",
+                "activityType": "checkbox",
+                "activityAnswer": "virus",
+                "activityAlternatives": ["bacteria","protozoario", "inseto", "virus"]
+            }
+        },
+        "teachers": [
+            "2","3"
+        ]
+    },
+    "treis":{
+        "name": "Portugues 3º Ano D",
+        "activities": {
+            "1": {
+                "name": "Atividade de fixação",
+                "description": "lorem iepslumsdsdas",
+                "activityType": "checkbox",
+                "activityAnswer": "VTDI",
+                "activityAlternatives": ["VTD","VTI", "VTDI"]
+            }
+        },
+        "teachers": [
+            "3"
+        ]
+    }
+}

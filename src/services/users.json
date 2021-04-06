@@ -1,0 +1,62 @@
+{
+    "lucas": {
+        "name": "Lucas Mateus Teixeira de Souza",
+        "nickname": "lucas 123", 
+        "passwd": "",
+        "email": "",
+        "age": "16",
+        "gender": "Masculino",
+        "theme": "dark",
+        "isaTeacher": false,
+        "isStreaming": false,
+        "streams": [],
+        "messages": {
+            "1": {
+                "content": "Bom dia",
+                "timestamp": "23124556",
+                "isEdited": false,
+                "isDeleted": false,
+                "class": "1",
+                "whenStream": false,
+                "activity": "1",
+                "stream": null
+            }
+        },
+        "proflePic": "https://images-ext-1.discordapp.net/external/1DhNtB3b7U-GsX9n0jov7RVF5bUzAoQ8-2VmiuNcNXg/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/470705101145767948/d0c6e295b6b3661985d3937a04df874b.png?width=467&height=467",
+        "classes": [
+            "1","2","3"
+        ]
+    },
+    "jão": {
+        "name": "jão",
+        "passwd": "",
+        "email": "",
+        "age": "16",
+        "isaTeacher": true,
+        "isStreaming": false,
+        "streams": {
+            "lastStream": {
+                "url": "https://cdn.discordapp.com/attachments/749252056518492180/818530911133499433/VID_20210307_234721_445.mp4",
+                "name": "Aula do dia",
+                "class": "Math",
+                "description": "1º class in this plataform"
+                }
+            },
+            "messages": {
+                "2": {
+                    "content": "Boa tarde",
+                    "timestamp": "23124556",
+                    "isEdited": false,
+                    "isDeleted": false,
+                    "class": "2",
+                    "whenStream": false,
+                    "activity": "1",
+                    "stream": null
+                }
+            },    
+        "proflePic": "",
+        "classes": [
+            "1","2","3"
+        ]
+    }
+}
