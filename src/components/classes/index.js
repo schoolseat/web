@@ -1,14 +1,13 @@
-import Login from '../login' 
-import Link from 'next/link'
-import {lucas} from '../../services/users.json'
-import {um} from '../../services/classes.json'
+import {Activities} from '../'
 
-let user = lucas;
-
-export default function classes() {
+export default function classes({user, grade}) {
+    console.log(grade)
     return(
         <div className="classes">
-            {um.name}
-    </div>
+            <div>
+                <h1>{grade.name}</h1>
+            </div>
+            <Activities  activity={grade.activities}/>
+        </div>
     )
 }

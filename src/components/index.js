@@ -9,11 +9,13 @@ import Layout from './layout';
 import Navbar from './navbar';
 import Profile from './profile';
 import Classes from './classes';
+import Activities from './activities'
 
 export {
     Layout,
     Navbar,
     Footer,
     Profile,
-    Classes
+    Classes,
+    Activities
 } 
