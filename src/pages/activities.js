@@ -2,14 +2,18 @@
 /* eslint-disable react/jsx-filename-extension */
 import { Layout, Navbar, Footer, Classes } from '../components';
 import {lucas} from '../services/users.json'
-import {um} from '../services/classes.json'
+import clas from '../services/classes.json'
 
 export default function classes() {
   return (
     <div>
       <Layout />
       <Navbar />
-      <Classes user={lucas} grade={um}/>
+      {
+      Object.values(clas).map(grade => {
+                  return <Classes user={lucas} grade={grade}/>
+                })
+      }
       <Footer />
     </div>
   )

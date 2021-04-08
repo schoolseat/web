@@ -4,17 +4,19 @@
         "activities": {
             "1": {
                 "name": "Atividade de fixação",
-                "description": "lorem iepslumsdsdas",
+                "description": "Qual numero dividido por 2 é igual a 11",
                 "activityType": "checkbox",
                 "activityAnswer": "22",
-                "activityAlternatives": ["10","21", "22", "40"]
+                "activityAlternatives": ["10","21", "22", "40"],
+                "isMutiple": false
             },
             "2": {
                 "name": "Atividade de fixação",
-                "description": "lorem yesplum",
+                "description": "Qual equação blah blah",
                 "activityType": "inputblock",
                 "activityAnswer": "5X+2=X",
-                "activityAlternatives": []
+                "activityAlternatives": [],
+                "isMutiple": false
             }
         },
         "teachers": [

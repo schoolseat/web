@@ -3,7 +3,7 @@ import {Activities} from '../'
 export default function classes({user, grade}) {
     return(
         <div className="classes">
-            <div>
+            <div className="classes-name">
                 <h1>{grade.name}</h1>
             </div>
             {
