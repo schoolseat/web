@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function profile(user) {
+export default function profile({ user }) {
   const {
     name,
     nickname,
@@ -11,6 +11,7 @@ export default function profile(user) {
     theme,
     classes,
   } = user;
+
   return (
     <div className="profile">
       <ul className="list">

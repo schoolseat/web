@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-expressions */
 import React, { useState } from 'react';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
-export default function login({ user }) {
+export default function login({ user, nick, profilepic }) {
   return (
     user
       ? (
         <Dropdown
-          data={user}
+          nickname={nick}
+          proflePic={profilepic}
         />
       ) : (
         <Link href="/login">
@@ -16,9 +18,10 @@ export default function login({ user }) {
       )
   );
 }
-function Dropdown(data) {
+
+function Dropdown({ nickname, proflePic }) {
   const [isListOpen, setListOpen] = useState(false);
-  const { proflePic, nickname } = data;
+
   const toggleList = () => {
     isListOpen ? setListOpen(false) : setListOpen(true);
   };
@@ -56,3 +59,7 @@ function Dropdown(data) {
     </div>
   );
 }
+Dropdown.propTypes = {
+  nickname: PropTypes.string.isRequired,
+  proflePic: PropTypes.string.isRequired,
+};

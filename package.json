@@ -13,11 +13,12 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "gray-matter": "^4.0.2",
     "next": "^10.0.0",
+    "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-fontawesome": "^1.7.1",
-    "remark-html": "^13.0.1"
     "remark": "^13.0.0",
+    "remark-html": "^13.0.1"
   },
   "devDependencies": {
     "eslint": "^7.23.0",

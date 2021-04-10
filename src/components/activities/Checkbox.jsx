@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Checkbox(activity) {
+export default function Checkbox({ activity }) {
   const { isMutiple, activityAlternatives } = activity;
   return (
     <div className="checkbox">
@@ -12,3 +13,6 @@ export default function Checkbox(activity) {
     </div>
   );
 }
+Checkbox.propTypes = {
+  activity: PropTypes.oneOfType([PropTypes.object]).isRequired,
+};
