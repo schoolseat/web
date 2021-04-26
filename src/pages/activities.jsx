@@ -6,6 +6,7 @@ import {
 import api from '../services/api';
 
 export default function classes() {
+  const [activityType, setActivityTipe] = useState();
   const [classData, setClassData] = useState();
   const [loading, setLoading] = useState(true);
 
@@ -33,6 +34,17 @@ export default function classes() {
     <div>
       <Layout />
       <Navbar />
+      <div className="buttons-div">
+        <button type="button" className="activities-buttons" onClick={() => setActivityTipe('done')}>
+          Atividades Concluidas
+        </button>
+        <button type="button" className="activities-buttons" onClick={() => setActivityTipe('pending')}>
+          Atividades Pendentes
+        </button>
+        <button type="button" className="activities-buttons" onClick={() => setActivityTipe('late')}>
+          Atividades Atrasadas
+        </button>
+      </div>
       {
         loading ? null : Object.values(classData).map((grade) => <Classes grade={grade} />)
       }

@@ -102,6 +102,7 @@ a {
   color: rgb(0, 255, 0);
 
   transition: 1s;
+  padding: 1%;
 }
 
 .login{
