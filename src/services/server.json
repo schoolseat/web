@@ -1,0 +1,148 @@
+{
+    "classes": [
+        {
+            "id": "0",
+            "name": "Matematica 3º Ano D",
+            "activities": [
+                {
+                    "id": "1",
+                    "name": "Atividade de fixação",
+                    "description": "Qual numero dividido por 2 é igual a 11",
+                    "activityType": "checkbox",
+                    "activityAnswer": "22",
+                    "activityAlternatives": [
+                        "10",
+                        "21",
+                        "22",
+                        "40"
+                    ],
+                    "isMutiple": false
+                },
+                {
+                    "id": "2",
+                    "name": "Atividade de fixação",
+                    "description": "Qual equação blah blah",
+                    "activityType": "inputblock",
+                    "activityAnswer": "5X+2=X",
+                    "activityAlternatives": [],
+                    "isMutiple": false
+                }
+            ],
+            "teachers": [
+                "1"
+            ]
+        },
+        {
+            "id": "1",
+            "name": "Quimica 3º Ano D",
+            "activities": [
+                {
+                    "id": "1",
+                    "name": "Atividade de fixação",
+                    "description": "lorem iepslumsdsdas",
+                    "activityType": "checkbox",
+                    "activityAnswer": "virus",
+                    "activityAlternatives": [
+                        "bacteria",
+                        "protozoario",
+                        "inseto",
+                        "virus"
+                    ]
+                }
+            ],
+            "teachers": [
+                "2",
+                "3"
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Portugues 3º Ano D",
+            "activities": [
+                {
+                    "id": "1",
+                    "name": "Atividade de fixação",
+                    "description": "lorem iepslumsdsdas",
+                    "activityType": "checkbox",
+                    "activityAnswer": "VTDI",
+                    "activityAlternatives": [
+                        "VTD",
+                        "VTI",
+                        "VTDI"
+                    ]
+                }
+            ],
+            "teachers": [
+                "3"
+            ]
+        }
+    ],
+    "users": [
+        {
+            "id": "0",
+            "name": "Lucas Mateus Teixeira de Souza",
+            "nickname": "lucas 123",
+            "passwd": "1234",
+            "email": "test@test.com",
+            "age": "16",
+            "gender": "Masculino",
+            "theme": "dark",
+            "isaTeacher": false,
+            "isStreaming": false,
+            "streams": [],
+            "messages": {
+                "1": {
+                    "content": "Bom dia",
+                    "timestamp": "23124556",
+                    "isEdited": false,
+                    "isDeleted": false,
+                    "class": "1",
+                    "whenStream": false,
+                    "activity": "1",
+                    "stream": null
+                }
+            },
+            "proflePic": "https://images-ext-1.discordapp.net/external/1DhNtB3b7U-GsX9n0jov7RVF5bUzAoQ8-2VmiuNcNXg/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/470705101145767948/d0c6e295b6b3661985d3937a04df874b.png?width=467&height=467",
+            "classes": [
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        {
+            "id": "1",
+            "name": "jão",
+            "passwd": "12345",
+            "email": "test5@test.com",
+            "age": "16",
+            "isaTeacher": true,
+            "isStreaming": false,
+            "streams": {
+                "lastStream": {
+                    "url": "https://cdn.discordapp.com/attachments/749252056518492180/818530911133499433/VID_20210307_234721_445.mp4",
+                    "name": "Aula do dia",
+                    "class": "Math",
+                    "description": "1º class in this plataform"
+                }
+            },
+            "messages": {
+                "2": {
+                    "content": "Boa tarde",
+                    "timestamp": "23124556",
+                    "isEdited": false,
+                    "isDeleted": false,
+                    "class": "2",
+                    "whenStream": false,
+                    "activity": "1",
+                    "stream": null
+                }
+            },
+            "proflePic": "",
+            "classes": [
+                "1",
+                "2",
+                "3"
+            ]
+        }
+    ]
+}

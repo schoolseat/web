@@ -11,17 +11,22 @@ export default function activities({ activity }) {
   } = activity;
 
   return (
-    <div className="activities">
+    <div className="activities-cards">
       <div className="activities-info">
         <p className="activities-name">{name}</p>
         <p className="activities-description">{description}</p>
       </div>
-      {
+      <div className="activities-input">
+        {
       activityType === 'checkbox'
         ? <Checkbox activity={activity} />
         : activityType === 'inputblock'
           ? <InputBox /> : ''
       }
+      </div>
+      <div>
+        <button type="button" className="activities-button">Enviar </button>
+      </div>
     </div>
   );
 }

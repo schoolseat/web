@@ -41,16 +41,27 @@ function Dropdown({ nickname, proflePic }) {
       {
       isListOpen && (
         <div role="list" className="dd-list">
-          <div>
+          <div className="dd-list-itens">
             <div className="user-data">
               <p className="nickname">{nickname}</p>
             </div>
             <Link
               type="button"
-              className="dd-list-item"
               href="/profile/"
             >
-              Perfil
+              <p className="dd-list-item">Perfil</p>
+            </Link>
+            <Link
+              type="button"
+              href="/activities/"
+            >
+              <p className="dd-list-item">Atividades</p>
+            </Link>
+            <Link
+              type="button"
+              href="/logout/"
+            >
+              <p className="dd-list-item">Sair</p>
             </Link>
           </div>
         </div>

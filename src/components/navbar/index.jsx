@@ -1,12 +1,28 @@
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import React from 'react';
 import Login from '../login';
-import { lucas } from '../../services/users.json';
 
-const { nickname } = lucas;
-const { proflePic } = lucas;
+import api from '../../services/api';
 
 export default function navBar() {
+  const [nick, setNick] = useState();
+  const [pic, setPic] = useState();
+  const [userData, setUserData] = useState();
+
+  useEffect(() => {
+    async function loadData() {
+      const { data } = await api.get('users?id=0');
+
+      const { nickname, proflePic } = data[0];
+
+      setNick(nickname);
+      setPic(proflePic);
+      setUserData(data[0]);
+    }
+    loadData();
+  }, []);
+
+  // console.log(typeof userData, userData);
   return (
     <div className="navBar">
       <Link href="/#">
@@ -14,7 +30,7 @@ export default function navBar() {
       </Link>
       <div className="buttons">
         <ul>
-          <Login className="login" profilepic={proflePic} nick={nickname} user={lucas} />
+          <Login className="login" profilepic={pic} nick={nick} user={userData} />
         </ul>
       </div>
     </div>

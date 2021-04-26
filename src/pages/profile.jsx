@@ -1,16 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
-  Layout, Navbar, Footer, Profile,
+  Layout,
+  Navbar,
+  Footer,
+  Profile,
+  Loading,
 } from '../components';
 
-import { lucas } from '../services/users.json';
+import api from '../services/api';
 
 export default function profile() {
+  const [userData, setUserData] = useState();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const { data } = await api.get('users?id=0');
+        if (!data) return setLoading(true);
+        if (data) {
+          setUserData(data[0]);
+        }
+        setLoading(false);
+        return 0;
+      } catch (e) {
+        throw new Error(e);
+      }
+    }
+    loadData();
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <div>
       <Layout />
       <Navbar />
-      <Profile user={lucas} />
+      <Profile user={userData} />
       <Footer />
     </div>
   );

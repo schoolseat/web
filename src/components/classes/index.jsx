@@ -12,7 +12,6 @@ export default function classes({ grade }) {
         Object.values(activities).map(
           (activity) => <Activities activity={activity} />,
         )
-
         }
     </div>
   );

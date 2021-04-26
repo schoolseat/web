@@ -1,38 +1,50 @@
-import React, { useCallback, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Layout, Navbar, Footer } from '../components';
+import React from 'react';
+import Link from 'next/link';
+import { Form, Input } from '@rocketseat/unform';
+import * as Yup from 'yup';
 
-export default function Login() {
-  const router = useRouter();
-  const handleSubmit = useCallback((e) => {
-    e.preventDefault();
+import {
+  Layout,
+  Navbar,
+  Footer,
+} from '../components';
 
-    fetch('/api/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        /* Form data */
-      }),
-    }).then((res) => {
-      // Do a fast client-side transition to the already prefetched dashboard page
-      if (res.ok) router.push('/dashboard');
-    });
-  }, []);
+const schema = Yup.object().shape({
+  email: Yup.string()
+    .email('Insira um email valido!')
+    .required('O email é obrigatorio'),
+  password: Yup.string().required('A senha é obrigatoria'),
+});
 
-  useEffect(() => {
-    // Prefetch the dashboard page
-    router.prefetch('/dashboard');
-  }, []);
-
+export default function SignIn() {
+  const loading = false;
+  function handleSubmit({ email, password }) {
+    console.log(email, password);
+  }
   return (
-    <div>
+    <div className="page-login">
       <Layout />
       <Navbar />
-      <div className="page-login">
-        <form onSubmit={handleSubmit}>
-          {/* Form fields */}
-          <button type="submit">Login</button>
-        </form>
+      <div>
+        <Form schema={schema} onSubmit={handleSubmit}>
+          <div className="labels">
+            <Input name="email" type="email" placeholder="Seu email" />
+            <Input
+              name="password"
+              type="password"
+              placeholder="Sua senha secreta"
+            />
+            <button type="submit" className="login-button">{loading ? 'Carregando...' : 'Acessar'}</button>
+          </div>
+          <div className="utils">
+            <Link href="/forgotpass">
+              <p className="utils-links">Esqueci a senha</p>
+            </Link>
+            <Link href="/logon">
+              <p className="utils-links">Criar conta gratuita</p>
+            </Link>
+          </div>
+        </Form>
       </div>
       <Footer />
     </div>
