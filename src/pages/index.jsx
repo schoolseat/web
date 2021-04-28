@@ -16,10 +16,10 @@ export default function Home() {
   });
 
   return (
-    <div>
+    <div className="page-landing">
       <Layout />
       <Navbar />
-      <div className="page-landing">
+      <div className="page-landing-content">
         <div className="page-landing-title">
           <h1>
             {greeting}
@@ -28,30 +28,39 @@ export default function Home() {
           </h1>
         </div>
         <img src="https://ddez.com.br/wp-content/uploads/2018/02/crianca-computador.jpg" alt="aa" />
+        <div className="page-landing-subscribe">
+          <p className="page-landing-subscribe-paragraph">
+            Ainda não se inscreveu em nossa plataforma?
+          </p>
+          <a href="/logon" className="link">
+            <p> Se inscreva </p>
+          </a>
+        </div>
         <div className="page-landing-reasons" id="#reasons">
           <ul>
-            <p>
-              <strong>Ainda não se inscreveu em nossa plataforma?</strong>
+            <p className="page-landing-reasons-title">
+              Veja alguns motivos para usar a Escola +
             </p>
-            <a href="/logon" className="page-landing-logon">
-              <p>Se inscreva</p>
-            </a>
-            <p>
-              <strong>Veja alguns motivos para usar a Escola +</strong>
-            </p>
-            <li>
+            <li className="page-landing-reasons-li">
               Aqui as atividades são tratadas como posts,
+              {' '}
+              <br />
+              {' '}
               então fica mais facil a vizualização
               e consequentemente a realização
             </li>
             <br />
-            <li>
+            <li className="page-landing-reasons-li">
               Os conteudos passados pelos professores ficam visiveis
-              e faceis para que o estudante não disperdice o seu tempo
+              e faceis
+              {' '}
+              <br />
+              {' '}
+              para que o estudante não disperdice o seu tempo
               tendo que procurar em sua turma
             </li>
             <br />
-            <li>
+            <li className="page-landing-reasons-li">
               A plataforma é totalmente gratuita e está aberta aos professores e estudantes
             </li>
           </ul>

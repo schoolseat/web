@@ -16,7 +16,14 @@
                         "22",
                         "40"
                     ],
-                    "isMutiple": false
+                    "isMutiple": false,
+                    "users": [
+                        {
+                            "done": [],
+                            "late": [],
+                            "pending": []
+                        }
+                    ]
                 },
                 {
                     "id": "2",
@@ -25,7 +32,14 @@
                     "activityType": "inputblock",
                     "activityAnswer": "5X+2=X",
                     "activityAlternatives": [],
-                    "isMutiple": false
+                    "isMutiple": false,
+                    "users": [
+                        {
+                            "done": [],
+                            "late": [],
+                            "pending": []
+                        }
+                    ]
                 }
             ],
             "teachers": [
@@ -47,6 +61,14 @@
                         "protozoario",
                         "inseto",
                         "virus"
+                    ], 
+                    "isMutiple": false,
+                    "users": [
+                        {
+                            "done": [],
+                            "late": [],
+                            "pending": []
+                        }
                     ]
                 }
             ],
@@ -69,6 +91,14 @@
                         "VTD",
                         "VTI",
                         "VTDI"
+                    ],
+                    "isMutiple": false,
+                    "users": [
+                        {
+                            "done": [],
+                            "late": [],
+                            "pending": []
+                        }
                     ]
                 }
             ],

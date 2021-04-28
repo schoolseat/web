@@ -44,6 +44,7 @@ export default function classes() {
         <button type="button" className="activities-buttons" onClick={() => setActivityTipe('late')}>
           Atividades Atrasadas
         </button>
+        {activityType}
       </div>
       {
         loading ? null : Object.values(classData).map((grade) => <Classes grade={grade} />)
