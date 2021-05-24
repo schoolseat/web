@@ -44,8 +44,6 @@
   width: 20em;
 }
 .PageLanding-first-img{
-  position: relative;
-  left: 10em;
   width: 60vw;
   height: 60vh;
 }
@@ -138,4 +136,11 @@
   height: 10em;
   top: 7em;
   left: 5em;
+}
+@media screen and (max-width: 1030px) {
+  .PageLanding-second-div, .PageLanding-first-div {
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
