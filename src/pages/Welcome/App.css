@@ -1,0 +1,141 @@
+.PageLanding-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  text-align: center;
+  align-items: center;
+
+  margin-left: 3%;
+  margin-top: 1%;
+}
+.PageLanding-title{
+  text-decoration: none;
+  color: var(--page-landing-title);
+  font-family: Montserrat;
+  font-size: 2em;
+}
+.PageLanding-buttonsdiv{
+  text-align: center;
+  align-items: center;
+
+  display: flex;
+  flex-direction: row;
+}
+.PageLanding-buttonsdiv-div{
+  margin-right: 3em;
+}
+.PageLanding-first-div{
+  display: flex;
+  flex-direction: row;
+
+  margin: 3%;
+}
+.PageLanding-first-div-div{
+  margin-bottom: 5%;
+}
+.PageLanding-first-div-title{
+  color: var(--title_color);
+  font-family: Montserrat;
+  font-size: 3em;
+}
+.PageLanding-first-div-paragraph{
+  font-family: Inter;
+  width: 20em;
+}
+.PageLanding-first-img{
+  position: relative;
+  left: 10em;
+  width: 60vw;
+  height: 60vh;
+}
+.PageLanding-second-div{
+  display: flex;
+  flex-direction: row;
+
+  margin: 3%;
+  margin-top: 5%;
+}
+.PageLanding-second-img{
+  width: 30vw;
+  height: 40vh;
+}
+.PageLanding-second-div-div{
+  margin-left: 5%;
+}
+.PageLanding-second-div-title{
+  color: var(--title_color);
+  font-family: Montserrat;
+}
+.PageLanding-second-div-paragraph{
+  font-family: Inter;
+  width: 40em;
+}
+
+.PageLanding-third-div{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+  margin: 3%;
+  margin-top: 5%;
+}
+.PageLanding-third-div-title{
+  color: var(--title_color);
+  font-family: Montserrat;
+}
+.PageLanding-third-div-paragraph{
+  font-family: Inter;
+  width: 40em;
+}
+.PageLanding-box{
+  display: flex;
+  flex-direction: column;
+}
+.PageLanding-boxes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  margin: 3%;
+}
+.PageLanding-box-green{
+  align-items: center;
+  text-align: center;
+  background-color: var(--box-background-green);
+  border-radius: 30px;
+
+  width: 30vw;
+  height: 40vh;
+}
+.PageLanding-box-purple{
+  align-items: center;
+  text-align: center;
+  background-color: var(--box-background-purple);
+  border-radius: 30px;
+
+  width: 30vw;
+  height: 40vh;
+}
+.PageLanding-box-title{
+  color: var(--title_color);
+  font-family: Montserrat;
+}
+.PageLanding-box-paragraph{
+  font-family: Inter;
+}
+.PageLanding-box-img{
+  position: relative;
+  width: 10em;
+  height: 10em;
+  top: 3em;
+  left: 5em;
+}
+.PageLanding-box-img-down{
+  position: relative;
+  width: 10em;
+  height: 10em;
+  top: 7em;
+  left: 5em;
+}

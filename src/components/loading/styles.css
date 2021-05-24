@@ -1,0 +1,13 @@
+.buttonComponent{
+    background-color: var(--button_background_color);
+
+    border: 0;
+    margin: 0;
+    border-radius: 50px;
+}
+.buttonComponent:hover{
+    opacity: 0.7;
+}
+.buttonComponentText{
+    color: var(--buton_color);
+}
