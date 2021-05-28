@@ -20,10 +20,10 @@ function App() {
         </div>
         <div className="PageLanding-buttonsdiv">
           <div className="PageLanding-buttonsdiv-div">
-            <Button name={`⠀⠀${t('pageLanding:navbar.logon')}⠀⠀`} />
+            <Button name={`${t('pageLanding:navbar.logon')}`} />
           </div>
           <div className="PageLanding-buttonsdiv-div">
-            <Button name={`⠀⠀${t('pageLanding:navbar.login')}⠀⠀`} />
+            <Button name={`${t('pageLanding:navbar.login')}`} />
           </div>
         </div>
       </header>
@@ -37,7 +37,7 @@ function App() {
           <p className="PageLanding-first-div-paragraph">
             {t('pageLanding:firstText.paragraph')}
           </p>
-          <Button name={`⠀⠀⠀⠀⠀⠀${t('pageLanding:firstText.button')}⠀⠀⠀⠀⠀⠀`} />
+          <Button name={`${t('pageLanding:firstText.button')}`} />
         </div>
         <img className="PageLanding-first-img" src={Layer1} alt="two persons ahead a computer" />
       </div>

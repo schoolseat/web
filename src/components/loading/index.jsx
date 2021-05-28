@@ -3,6 +3,8 @@ import './styles.css';
 
 export default function Loading() {
   return (
-    <p>Carregano</p>
+    <div>
+      <p className="loading-title">Escola +</p>
+    </div>
   );
 }

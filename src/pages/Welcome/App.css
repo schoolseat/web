@@ -143,4 +143,40 @@
     align-items: center;
     flex-direction: column;
   }
+  .PageLanding-box-img{
+    top: 7em;
+  }
+}
+@media screen and (max-width: 674px) {
+  .PageLanding-first-div-paragraph{
+    width: auto;
+  }
+  .PageLanding-second-div-paragraph{
+    width: auto;
+  }
+  .PageLanding-boxes{
+    flex-direction: column;
+    align-items: center;
+  }
+  .PageLanding-box-green, .PageLanding-box-purple{
+    height: auto;
+  }
+  .PageLanding-box-img{
+    position: static;
+  }
+  .PageLanding-box-img-down{
+    position: static;
+  }
+}
+@media screen and (max-width:  500px) {
+  .PageLanding-header{
+    font-size: .9em;
+  }
+  .buttonComponent{
+    margin-top: 5% !important;
+  }
+  .PageLanding-buttonsdiv{
+    flex-direction: column;
+    margin: 1%;
+  }
 }
