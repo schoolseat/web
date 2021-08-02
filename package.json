@@ -1,5 +1,5 @@
 {
-  "name": "escolaplusweb",
+  "name": "@schoolseat/web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
