@@ -24,8 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tailwind": "npx tailwind build src/styles/tailwind.css -o src/styles/index.css",
-    "prestart": "npm run tailwind"
+    "tailwind": "tailwind build src/styles/tailwind.css -o src/styles/index.css"
   },
   "browserslist": {
     "production": [
