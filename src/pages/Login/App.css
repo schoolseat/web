@@ -5,7 +5,7 @@
 }
 #page-login aside {
   flex: 6;
-  background: #6b63dd;
+  background: var(--purple);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +18,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.image {
+  width: 50vw;
+  height: max-content;
 }
 .main-content {
   display: flex;
@@ -36,22 +40,22 @@ main {
 }
 .main-content form input {
   height: 50px;
+  padding-left: 1rem;
   border-radius: 8px;
-  padding: 0 16px;
-  background: #fff;
-}
-.main-content input {
+  background: var(--white);
+  border: 1px var(--input-border-color) solid;
+  
+  width: 18.8rem;
   margin-top: 18px;
   margin-bottom: 18px;
 }
-.main-content form button,
-.main-content form input {
-  width: 100%;
+.main-content form button {
+  width: 20rem;
 }
 
 .separator {
   font-size: 14px;
-  color: #a8a8b3;
+  color: var(--separator-color);;
   margin: 32px 0;
   display: flex;
   align-items: center;
@@ -60,14 +64,14 @@ main {
   content: '';
   flex: 1;
   height: 1px;
-  background: #a8a8b3;
+  background: var(--separator-color);;
   margin-right: 16px;
 }
 .separator::after {
   content: '';
   flex: 1;
   height: 1px;
-  background: #a8a8b3;
+  background: var(--separator-color);
   margin-left: 16px;
 }
 
@@ -84,13 +88,13 @@ main {
 }
 
 .button-login {
-  background: #04c35c;
-  color: #fff;
+  color: var(--white);
+  background: var(--green);
 }
 
 .button-google {
-  background: #ea4335;
-  color: #fff;
+  color: var(--white);
+  background: var(--red);
 }
 
 .button-google img {
@@ -102,12 +106,10 @@ main {
 }
 
 h2 {
-  font-weight: 600;
   font-size: 20px;
+  font-weight: 600;
 }
 label {
   font-size: 18px;
 }
-input {
-  margin-top: 16px;
-}
+

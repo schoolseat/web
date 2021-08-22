@@ -7,7 +7,7 @@ import ilustration from '../../assets/ilustration.png';
 const App = () => (
   <div id="page-login">
     <aside>
-      <img src={ilustration} alt="Illustration of a boy writing" />
+      <img src={ilustration} className="image" alt="Illustration of a boy writing" />
     </aside>
     <main>
       <div className="main-content">

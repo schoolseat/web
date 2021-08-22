@@ -11,6 +11,13 @@
 
   --title_color: rgb(33, 35, 83);
   --text_color: rgb(75, 93, 104);
+  --input-border-color: #E8E8E8;
+  --separator-color: #a8a8b3;
+
+  --green: #04c35c;
+  --white: #fff;
+  --red: #ea4335;
+  --purple: #6b63dd;
 }
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
