@@ -39,11 +39,11 @@
             }
         }
     },
-    "en-US": {
+    "en-US" : {
         "pageLanding": {
             "navbar": {
                 "login": "Login",
-                "logon": "Logon"
+                "logon": "Sing in"
             },
             "firstText": {
                 "title": "Join in",

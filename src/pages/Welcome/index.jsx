@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Button } from '../../components';
+import { Button, Header } from '../../components';
 import box1 from '../../assets/box1.png';
 import box2 from '../../assets/box2.png';
 import box3 from '../../assets/box3.png';
@@ -14,19 +14,7 @@ function App() {
   const { t } = useTranslation();
   return (
     <div className="App">
-      <header className="PageLanding-header">
-        <div>
-          <a href="/" className="PageLanding-title">Escola +</a>
-        </div>
-        <div className="PageLanding-buttonsdiv">
-          <div className="PageLanding-buttonsdiv-div">
-            <Button name={`${t('pageLanding:navbar.logon')}`} />
-          </div>
-          <div className="PageLanding-buttonsdiv-div">
-            <Button name={`${t('pageLanding:navbar.login')}`} />
-          </div>
-        </div>
-      </header>
+      <Header />
       <div className="PageLanding-first-div">
         <div className="PageLanding-first-div-div">
           <h2 className="PageLanding-first-div-title">
@@ -39,10 +27,18 @@ function App() {
           </p>
           <Button name={`${t('pageLanding:firstText.button')}`} />
         </div>
-        <img className="PageLanding-first-img" src={Layer1} alt="two persons ahead a computer" />
+        <img
+          className="PageLanding-first-img"
+          src={Layer1}
+          alt="two persons ahead a computer"
+        />
       </div>
       <div className="PageLanding-second-div">
-        <img src={Layer2} className="PageLanding-second-img" alt="a girl with some books" />
+        <img
+          src={Layer2}
+          className="PageLanding-second-img"
+          alt="a girl with some books"
+        />
         <div className="PageLanding-second-div-div">
           <h2 className="PageLanding-second-div-title">
             {t('pageLanding:secondText.title')}
@@ -66,7 +62,11 @@ function App() {
       </div>
       <div className="PageLanding-box">
         <div className="PageLanding-boxes">
-          <img src={box1} className="PageLanding-box-img" alt="A guy searching for something in a document" />
+          <img
+            src={box1}
+            className="PageLanding-box-img"
+            alt="A guy searching for something in a document"
+          />
           <div className="PageLanding-box-green">
             <p className="PageLanding-box-title">
               {t('pageLanding:firstBox.title')}
@@ -75,7 +75,11 @@ function App() {
               {t('pageLanding:firstBox.paragraph')}
             </p>
           </div>
-          <img src={box2} className="PageLanding-box-img" alt="A girl using a laptop" />
+          <img
+            src={box2}
+            className="PageLanding-box-img"
+            alt="A girl using a laptop"
+          />
           <div className="PageLanding-box-purple">
             <p className="PageLanding-box-title">
               {t('pageLanding:secondBox.title')}
@@ -86,7 +90,11 @@ function App() {
           </div>
         </div>
         <div className="PageLanding-boxes">
-          <img src={box3} className="PageLanding-box-img-down" alt="A printer" />
+          <img
+            src={box3}
+            className="PageLanding-box-img-down"
+            alt="A printer"
+          />
           <div className="PageLanding-box-purple">
             <p className="PageLanding-box-title">
               {t('pageLanding:thirdBox.title')}

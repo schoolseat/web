@@ -1,20 +1,4 @@
-.PageLanding-header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  
-  text-align: center;
-  align-items: center;
 
-  margin-left: 3%;
-  margin-top: 1%;
-}
-.PageLanding-title{
-  text-decoration: none;
-  color: var(--page-landing-title);
-  font-family: Montserrat;
-  font-size: 2em;
-}
 .PageLanding-buttonsdiv{
   text-align: center;
   align-items: center;

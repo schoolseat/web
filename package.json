@@ -3,15 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@tailwindcss/aspect-ratio": "^0.2.0",
-    "@tailwindcss/forms": "^0.2.1",
-    "@tailwindcss/typography": "^0.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "i18next": "^20.3.0",
     "prop-types": "^15.7.2",
-    "tailwindcss": "^2.0.3",
+    "proptypes": "^1.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.8.15",
@@ -23,8 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "tailwind": "tailwind build src/styles/tailwind.css -o src/styles/index.css"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [

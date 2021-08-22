@@ -24,11 +24,11 @@ main {
   height: max-content;
 }
 .main-content {
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  display: flex;
   max-width: 320px;
   align-items: stretch;
+  flex-direction: column;
 }
 .main-content > img {
   align-self: center;
