@@ -4,15 +4,22 @@ import {
   Route,
   BrowserRouter as Router,
 } from 'react-router-dom';
-import { pageLanding, notFound, pageLogin } from './index';
+import {
+  Login,
+  SingIn,
+  Welcome,
+  NotFound,
+} from './index';
 
 function router() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={pageLanding} />
-        <Route exact path="/login" component={pageLogin} />
-        <Route component={notFound} />
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/singin" component={SingIn} />
+
+        <Route component={NotFound} />
       </Switch>
     </Router>
 

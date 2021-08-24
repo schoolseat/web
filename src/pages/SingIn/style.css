@@ -1,0 +1,131 @@
+#page-login {
+  display: flex;
+  align-items: stretch;
+}
+#page-login aside {
+  flex: 6;
+  height: 120vh;
+  display: flex;
+  padding: 120px 80px;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--purple);
+}
+
+.image {
+  width: 40vw;
+  height: max-content;
+}
+main {
+  flex: 8;
+  display: flex;
+  padding: 0 32px;
+  align-items: center;
+  justify-content: center;
+}
+.main-content {
+  width: 100%;
+  display: flex;
+  max-width: 320px;
+  margin-top: 20rem;
+  align-items: stretch;
+  flex-direction: column;
+}
+.main-content > img {
+  align-self: center;
+}
+.main-content h2 {
+  font-size: 24px;
+  margin: 64px 0 24px;
+}
+.main-content h1 {
+  font-size: 30px;
+  margin-top: 1rem;
+  margin: 64px 0 24px;
+}
+.main-content form input {
+  height: 50px;
+  padding-left: 1rem;
+  border-radius: 8px;
+  background: var(--white);
+  border: 1px var(--input-border-color) solid;
+  
+  width: 18.8rem;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+.main-content form button {
+  width: 20rem;
+}
+
+.separator {
+  font-size: 14px;
+  color: var(--separator-color);;
+  margin: 32px 0;
+  display: flex;
+  align-items: center;
+}
+.separator::before {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--separator-color);;
+  margin-right: 16px;
+}
+.separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--separator-color);
+  margin-left: 16px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+  height: 50px;
+  padding: 0 32px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.button-login {
+  color: var(--white);
+  background: var(--green);
+}
+
+.button-google {
+  color: var(--white);
+  background: var(--red);
+}
+
+.button-google img {
+  margin-right: 10px;
+}
+
+.button-google:hover {
+  filter: brightness(0, 9);
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+label {
+  font-size: 18px;
+}
+@media screen and (max-width:  450px) {
+  #page-login {
+    margin-top: 0;
+  }
+  #page-login aside {
+    display: none;
+  }
+  .image {
+    display: none;
+  }
+}
+

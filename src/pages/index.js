@@ -1,9 +1,11 @@
-import pageLanding from './Welcome';
-import notFound from './NotFound';
-import pageLogin from './Login';
+import Welcome from './Welcome';
+import NotFound from './NotFound';
+import Login from './Login';
+import SingIn from './SingIn';
 
 export {
-  pageLanding,
-  notFound,
-  pageLogin,
+  Login,
+  SingIn,
+  Welcome,
+  NotFound,
 };

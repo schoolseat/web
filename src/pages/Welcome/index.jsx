@@ -1,4 +1,4 @@
-import './App.css';
+import './styles.css';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -12,6 +12,7 @@ import Layer2 from '../../assets/Layer2.png';
 
 function App() {
   const { t } = useTranslation();
+
   return (
     <div className="App">
       <Header />
