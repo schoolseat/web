@@ -83,8 +83,8 @@ export default function App() {
             />
             <label htmlFor="profilePic">Profile Pic</label>
             <input
-              name="profilePic"
               type="file"
+              accept="image/*"
               onChange={(data) => setProfilePic(data.target.value)}
             />
             <button

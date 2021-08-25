@@ -12,6 +12,7 @@
 
   --title_color: rgb(33, 35, 83);
   --text_color: rgb(75, 93, 104);
+  --input-color: rgb(153, 153, 153);
   --input-border-color: rgb(232, 232, 232);
   --separator-color: rgb(168, 168, 179);
 
@@ -26,4 +27,7 @@ body {
   margin: 0;
   background-color: var(--background_color);
   color: var(--text_color);
+}
+input::placeholder {
+  color: var(--input-color);
 }
