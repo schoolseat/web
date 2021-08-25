@@ -20,6 +20,10 @@
   --white: rgb(255, 255, 255);
   --red: rgb(234, 67, 53);
   --purple: rgb(107, 99, 221);
+
+  --fonts-text: '500';
+  --fonts-heading: '600';
+  --fonts-complement: '400';
 }
 body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,

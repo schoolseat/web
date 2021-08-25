@@ -8,6 +8,7 @@ import {
   Login,
   SingIn,
   Welcome,
+  Calendar,
   NotFound,
 } from './index';
 
@@ -18,7 +19,7 @@ function router() {
         <Route exact path="/" component={Welcome} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/singin" component={SingIn} />
-
+        <Route exact path="/calendar" component={Calendar} />
         <Route component={NotFound} />
       </Switch>
     </Router>

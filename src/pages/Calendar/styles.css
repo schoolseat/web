@@ -1,0 +1,45 @@
+.calendar-body{
+  display: flex;
+  flex-direction: column;
+
+}
+.calendar-body-header {
+  display: flex;
+  padding-left: 2rem;
+  flex-direction: row;
+  align-items: center;
+}
+.calendar-body-header-day-number{
+  font-size: 4rem;
+  font-weight: var(--fonts-text);
+}
+.calendar-body-header-date-div{
+  line-height: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.calendar-body-header-day-name{
+  font-size: 2rem;
+  font-weight: var(--fonts-text);
+}
+.calendar-body-header-month-year{
+  font-size: 1rem;
+}
+.calendar-body-header-text{
+  margin-left: 5rem;
+  font-weight: var(--fonts-heading);;
+  font-size: 2rem;
+}
+.calendar-selectors-div{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.calendar-selectors{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.calendar-selectors-titles{
+  font-weight: var(--fonts-text);
+  font-size: 1.3rem;
+}
