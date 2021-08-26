@@ -4,7 +4,7 @@ import './styles.css';
 
 import { useTranslation } from 'react-i18next';
 
-import HeaderButton from '../headerbuttons';
+import HeaderButton from '../headerButton';
 import { useApi } from '../../hooks/auth';
 
 export default function Header() {

@@ -43,3 +43,7 @@
   font-weight: var(--fonts-text);
   font-size: 1.3rem;
 }
+.calendar-invisible-buttons{
+  border: none;
+  background-color: transparent;
+}

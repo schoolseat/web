@@ -1,0 +1,36 @@
+.calendar-card {
+    padding: .5em 1em .5em 1em;
+    line-height: .5rem;
+    border-radius: 20px;
+    background-color: var(--green);
+}
+.calendar-card-title-div {
+    display: flex;
+    justify-content: space-between;
+}
+.calendar-card-title{
+    color: var(--white);
+    font-weight: var(--fonts-heading);
+}
+.calendar-card-content{
+    color: var(--white);
+    font-weight: var(--fonts-text);
+}
+.calendar-card-texts{
+    margin-left: .5em;
+    color: var(--white);
+    font-weight: var(--fonts-complement);
+}
+.calendar-card-data-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.calendar-card-teacher-pfp{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+}
+ion-icon{
+    color: var(--white);
+}

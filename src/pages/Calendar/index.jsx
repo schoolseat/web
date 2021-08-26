@@ -1,11 +1,14 @@
 import './styles.css';
-import React from 'react';
+import React, { useState } from 'react';
 // import { useTranslation } from 'react-i18next';
-import { FiChevronsDown } from 'react-icons/fi';
 
-import { Header } from '../../components';
+import { Header, CalendarCard } from '../../components';
 
 export default function Calendar() {
+  const [showLate, setShowLate] = useState(false);
+  const [showWeekly, setShowWeekly] = useState(false);
+  const [showMissing, setShowMissing] = useState(false);
+
   // const { t } = useTranslation();
   const date = new Date();
 
@@ -52,16 +55,31 @@ export default function Calendar() {
         <div className="calendar-selectors-div">
           <div className="calendar-selectors">
             <p className="calendar-selectors-titles">Atrasadas</p>
-            <FiChevronsDown />
+            <button className="calendar-invisible-buttons" type="button" onClick={() => setShowMissing(!showMissing)}>
+              <i data-feather="chevrons-down" />
+            </button>
           </div>
+          {
+            showMissing && <CalendarCard />
+          }
           <div className="calendar-selectors">
             <p className="calendar-selectors-titles">Para essa semana</p>
-            <FiChevronsDown />
+            <button className="calendar-invisible-buttons" type="button" onClick={() => setShowWeekly(!showWeekly)}>
+              <i data-feather="chevrons-down" />
+            </button>
           </div>
+          {
+            showWeekly && <CalendarCard />
+          }
           <div className="calendar-selectors">
             <p className="calendar-selectors-titles">Para depois</p>
-            <FiChevronsDown />
+            <button className="calendar-invisible-buttons" type="button" onClick={() => setShowLate(!showLate)}>
+              <i data-feather="chevrons-down" />
+            </button>
           </div>
+          {
+            showLate && <CalendarCard />
+          }
         </div>
       </body>
     </div>
