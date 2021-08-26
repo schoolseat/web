@@ -1,6 +1,6 @@
 import './styles.css';
 import React, { useState } from 'react';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 import { Header, CalendarCard } from '../../components';
 
@@ -9,7 +9,7 @@ export default function Calendar() {
   const [showWeekly, setShowWeekly] = useState(false);
   const [showMissing, setShowMissing] = useState(false);
 
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
   const date = new Date();
 
   const activities = [];
@@ -18,9 +18,9 @@ export default function Calendar() {
   function greeting() {
     const hour = date.getHours();
 
-    if (hour > 6 && hour < 12) return 'Bom dia';
-    if (hour >= 12 && hour < 18) return 'Boa tarde';
-    return 'Boa noite';
+    if (hour > 6 && hour < 12) return t('pageCalendar:greetings.morning');
+    if (hour >= 12 && hour < 18) return t('pageCalendar:greetings.afternoon');
+    return t('pageCalendar:greetings.evening');
   }
 
   return (
@@ -29,32 +29,25 @@ export default function Calendar() {
       <body className="calendar-body">
         <div className="calendar-body-header">
           <h1 className="calendar-body-header-day-number">
-            24
+            {date.getDate()}
           </h1>
           <div className="calendar-body-header-date-div">
             <h2 className="calendar-body-header-day-name">
-              Quarta
+              {t(`days:${date.getDay()}`)}
             </h2>
             <p className="calendar-body-header-month-year">
-              Jan 2022
+              {t(`months:${date.getMonth()}`)}
+              {' '}
+              {date.getFullYear()}
             </p>
           </div>
           <p className="calendar-body-header-text">
-            {greeting()}
-            , para hoje há
-            {' '}
-            {activities.length}
-            {' '}
-            atividades e
-            {' '}
-            {content.length}
-            {' '}
-            conteudos novos!
+            {t('pageCalendar:header', { greeting: greeting(), activity: activities.length, content: content.length })}
           </p>
         </div>
         <div className="calendar-selectors-div">
           <div className="calendar-selectors">
-            <p className="calendar-selectors-titles">Atrasadas</p>
+            <p className="calendar-selectors-titles">{t('pageCalendar:selectors.missing')}</p>
             <button className="calendar-invisible-buttons" type="button" onClick={() => setShowMissing(!showMissing)}>
               <i data-feather="chevrons-down" />
             </button>
@@ -63,7 +56,7 @@ export default function Calendar() {
             showMissing && <CalendarCard />
           }
           <div className="calendar-selectors">
-            <p className="calendar-selectors-titles">Para essa semana</p>
+            <p className="calendar-selectors-titles">{t('pageCalendar:selectors.weekly')}</p>
             <button className="calendar-invisible-buttons" type="button" onClick={() => setShowWeekly(!showWeekly)}>
               <i data-feather="chevrons-down" />
             </button>
@@ -72,7 +65,7 @@ export default function Calendar() {
             showWeekly && <CalendarCard />
           }
           <div className="calendar-selectors">
-            <p className="calendar-selectors-titles">Para depois</p>
+            <p className="calendar-selectors-titles">{t('pageCalendar:selectors.later')}</p>
             <button className="calendar-invisible-buttons" type="button" onClick={() => setShowLate(!showLate)}>
               <i data-feather="chevrons-down" />
             </button>

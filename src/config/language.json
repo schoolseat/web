@@ -1,82 +1,118 @@
 {
-    "pt-BR": {
-        "pageLanding": {
-            "navbar": {
-                "login": "Entrar",
-                "logon": "Cadastre-se"
-            },
-            "firstText": {
-                "title": "Entre hoje ",
-                "title_": "para a Escola+.",
-                "paragraph": "A Escola+ é uma plataforma de ensino bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla \n bla bla bla bla bla bla bla bla bla",
-                "button": "Saiba mais"
-            },
-            "secondText": {
-                "title": "Uma plataforma que",
-                "_title": "leva a serio as",
-                "title_": "atividades.",
-                "paragraph": "Mauris ultrices lorem nec diam venenatis, eget bibendum dui porttitor. Suspendisse facilisis egestas auctor. Pellentesque sit amet sollicitudin nulla. Vivamus finibus nisl id turpis dapibus gravida. Integer orci nisi, cursus et dolor sit amet, ornare accumsan massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean sed dolor ac odio accumsan congue vel at sem. Sed et orci sed elit lobortis blandit quis nec arcu. Maecenas id ex eget tellus iaculis porttitor."
-            },
-            "diferential": {
-                "title": "Diferencial",
-                "paragraph": "diferencial muito brabo"
-            },
-            "firstBox": {
-                "title": "indexação de atividades",
-                "paragraph": "lorem ipslum e tu sabe o que"
-            },
-            "secondBox": {
-                "title": "Acesso 24 Horas ",
-                "paragraph": "Acesse quando e onde quiser "
-            },
-            "thirdBox": {
-                "title": "Imprima",
-                "paragraph": "Consiga baixar e imprimir suas atividades e notas"
-            },
-            "fourthBox": {
-                "title": "Segurança",
-                "paragraph": "Nos preocupamos demais com sua segurança"
-            }
-        }
+  "pt-BR": {
+    "days": [
+        "Domingo",
+        "Segunda",
+        "Terca",
+        "Quarta",
+        "Quinta",
+        "Sexta",
+        "Sabado"
+    ],
+    "months": [
+        "Janeiro",
+        "Fevereiro",
+        "Marco",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro"
+    ],
+    "pageLanding": {
+      "navbar": {
+        "login": "Entrar",
+        "logon": "Cadastre-se"
+      },
+      "firstText": {
+        "title": "Entre hoje ",
+        "title_": "para a Escola+.",
+        "paragraph": "A Escola+ é uma plataforma de ensino bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla \n bla bla bla bla bla bla bla bla bla",
+        "button": "Saiba mais"
+      },
+      "secondText": {
+        "title": "Uma plataforma que",
+        "_title": "leva a serio as",
+        "title_": "atividades.",
+        "paragraph": "Mauris ultrices lorem nec diam venenatis, eget bibendum dui porttitor. Suspendisse facilisis egestas auctor. Pellentesque sit amet sollicitudin nulla. Vivamus finibus nisl id turpis dapibus gravida. Integer orci nisi, cursus et dolor sit amet, ornare accumsan massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean sed dolor ac odio accumsan congue vel at sem. Sed et orci sed elit lobortis blandit quis nec arcu. Maecenas id ex eget tellus iaculis porttitor."
+      },
+      "diferential": {
+        "title": "Diferencial",
+        "paragraph": "diferencial muito brabo"
+      },
+      "firstBox": {
+        "title": "indexação de atividades",
+        "paragraph": "lorem ipslum e tu sabe o que"
+      },
+      "secondBox": {
+        "title": "Acesso 24 Horas ",
+        "paragraph": "Acesse quando e onde quiser "
+      },
+      "thirdBox": {
+        "title": "Imprima",
+        "paragraph": "Consiga baixar e imprimir suas atividades e notas"
+      },
+      "fourthBox": {
+        "title": "Segurança",
+        "paragraph": "Nos preocupamos demais com sua segurança"
+      }
     },
-    "en-US" : {
-        "pageLanding": {
-            "navbar": {
-                "login": "Login",
-                "logon": "Sing in"
-            },
-            "firstText": {
-                "title": "Join in",
-                "title_": "Escola+ today.",
-                "paragraph": "A Escola+ é uma plataforma de ensino bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla \n bla bla bla bla bla bla bla bla bla",
-                "button": "See more"
-            },
-            "secondText": {
-                "title": "A platform that",
-                "_title": "takes activities",
-                "title_": "seriously.",
-                "paragraph": "Mauris ultrices lorem nec diam venenatis, eget bibendum dui porttitor. Suspendisse facilisis egestas auctor. Pellentesque sit amet sollicitudin nulla. Vivamus finibus nisl id turpis dapibus gravida. Integer orci nisi, cursus et dolor sit amet, ornare accumsan massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean sed dolor ac odio accumsan congue vel at sem. Sed et orci sed elit lobortis blandit quis nec arcu. Maecenas id ex eget tellus iaculis porttitor."
-            },
-            "diferential": {
-                "title": "Diferencial",
-                "paragraph": "LSD auto-blockante com suporte para 3.000HP"
-            },
-            "firstBox": {
-                "title": "indexação de atividades",
-                "paragraph": "lorem ipslum e tu sabe o que"
-            },
-            "secondBox": {
-                "title": "Acesso 24 Horas ",
-                "paragraph": "Acesse quando e onde quiser "
-            },
-            "thirdBox": {
-                "title": "Imprima",
-                "paragraph": "Consiga baixar e imprimir suas atividades e notas"
-            },
-            "fourthBox": {
-                "title": "Segurança",
-                "paragraph": "Nos preocupamos demais com sua segurança"
-            }
-        }
+    "pageCalendar": {
+      "greetings": {
+        "morning": "Bom dia",
+        "afternoon": "Boa tarde",
+        "evening": "Boa noite"
+      },
+      "header": "{{greeting}}, para hoje há {{activity}} atividades e {{content}} conteúdos novos!",
+      "selectors": {
+        "missing": "Atrasado",
+        "weekly": "Para essa semana",
+        "later": "para depois"
+      }
     }
+  },
+  "en-US": {
+    "pageLanding": {
+      "navbar": {
+        "login": "Login",
+        "logon": "Sing in"
+      },
+      "firstText": {
+        "title": "Join in",
+        "title_": "Escola+ today.",
+        "paragraph": "A Escola+ é uma plataforma de ensino bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla \n bla bla bla bla bla bla bla bla bla",
+        "button": "See more"
+      },
+      "secondText": {
+        "title": "A platform that",
+        "_title": "takes activities",
+        "title_": "seriously.",
+        "paragraph": "Mauris ultrices lorem nec diam venenatis, eget bibendum dui porttitor. Suspendisse facilisis egestas auctor. Pellentesque sit amet sollicitudin nulla. Vivamus finibus nisl id turpis dapibus gravida. Integer orci nisi, cursus et dolor sit amet, ornare accumsan massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean sed dolor ac odio accumsan congue vel at sem. Sed et orci sed elit lobortis blandit quis nec arcu. Maecenas id ex eget tellus iaculis porttitor."
+      },
+      "diferential": {
+        "title": "Diferencial",
+        "paragraph": "LSD auto-blockante com suporte para 3.000HP"
+      },
+      "firstBox": {
+        "title": "indexação de atividades",
+        "paragraph": "lorem ipslum e tu sabe o que"
+      },
+      "secondBox": {
+        "title": "Acesso 24 Horas ",
+        "paragraph": "Acesse quando e onde quiser "
+      },
+      "thirdBox": {
+        "title": "Imprima",
+        "paragraph": "Consiga baixar e imprimir suas atividades e notas"
+      },
+      "fourthBox": {
+        "title": "Segurança",
+        "paragraph": "Nos preocupamos demais com sua segurança"
+      }
+    }
+  }
 }
