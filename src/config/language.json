@@ -81,6 +81,38 @@
     }
   },
   "en-US": {
+    "days": [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thusday",
+      "Friday",
+      "Saturday"
+  ],
+  "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+  ],
+  "navbar": {
+    "login": "Log-in",
+    "logon": "Sing-in",
+    "header": {
+      "home": "Home",
+      "calendar": "Calendar",
+      "classes": "Classes"
+    }
+  },
     "pageLanding": {
       "navbar": {
         "login": "Login",
@@ -117,6 +149,19 @@
       "fourthBox": {
         "title": "Segurança",
         "paragraph": "Nos preocupamos demais com sua segurança"
+      }
+    },
+  "pageCalendar": {
+      "greetings": {
+        "morning": "Good morning",
+        "afternoon": "Good afternoon",
+        "evening": "Good evening"
+      },
+      "header": "{{greeting}}, today you got {{activity}} activities and {{content}} new contents!",
+      "selectors": {
+        "missing": "Missing",
+        "weekly": "To-do this week",
+        "later": "To-do later"
       }
     }
   }
