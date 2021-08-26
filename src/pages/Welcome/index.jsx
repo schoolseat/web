@@ -2,7 +2,7 @@ import './styles.css';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Button, Header } from '../../components';
+import { Button } from '../../components';
 import box1 from '../../assets/box1.png';
 import box2 from '../../assets/box2.png';
 import box3 from '../../assets/box3.png';
@@ -15,7 +15,6 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <div className="PageLanding-first-div">
         <div className="PageLanding-first-div-div">
           <h2 className="PageLanding-first-div-title">

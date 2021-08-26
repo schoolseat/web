@@ -2,7 +2,7 @@ import './styles.css';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { Header, CalendarCard } from '../../components';
+import { CalendarCard } from '../../components';
 
 export default function Calendar() {
   const [showLate, setShowLate] = useState(false);
@@ -25,7 +25,6 @@ export default function Calendar() {
 
   return (
     <div className="calendar">
-      <Header />
       <body className="calendar-body">
         <div className="calendar-body-header">
           <h1 className="calendar-body-header-day-number">

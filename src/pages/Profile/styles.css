@@ -1,0 +1,22 @@
+.profile-data-div{
+    display: flex;
+    margin: 1rem;
+    flex-direction: row;
+}
+.profile-pfp{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%
+}
+.profile-user-div {
+    display: flex;
+    margin-left: 1rem;
+    flex-direction: column;
+}
+.profile-user-name{
+    color: var(--title_color);
+}
+.profile-user-bio{
+    color: var(--text_color);
+    width: 40rem;
+}
