@@ -14,23 +14,24 @@ export default function Header() {
     <div className="header-container">
       <div className="header-subcontainer">
         <h1 className="header-title">SchoolSeat</h1>
-        { user && <Logged /> }
+        { !user && <Logged /> }
       </div>
-      { !user && <Unknow /> }
+      { user && <Unknow /> }
     </div>
   );
 }
 export function Logged() {
+  const { t } = useTranslation();
   return (
     <div>
       <a href="/" className="header-texts">
-        Home
+        {t('navbar:header.home')}
       </a>
       <a href="/calendar" className="header-texts">
-        Calendar
+        {t('navbar:header.calendar')}
       </a>
       <a href="/classes" className="header-texts">
-        Classes
+        {t('navbar:header.classes')}
       </a>
     </div>
   );
@@ -41,10 +42,10 @@ export function Unknow() {
   return (
     <div className="header-subcontainer">
       <div className="buttons">
-        <HeaderButton title={`${t('pageLanding:navbar.logon')}`} href="/singin" />
+        <HeaderButton title={`${t('navbar:logon')}`} href="/singin" />
       </div>
       <div className="buttons">
-        <HeaderButton title={`${t('pageLanding:navbar.login')}`} isPurple href="/login" />
+        <HeaderButton title={`${t('navbar:login')}`} isPurple href="/login" />
       </div>
     </div>
   );

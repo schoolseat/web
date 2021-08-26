@@ -23,11 +23,16 @@
         "Novembro",
         "Dezembro"
     ],
+    "navbar": {
+      "login": "Entrar",
+      "logon": "Cadastre-se",
+      "header": {
+        "home": "Pagina Inicial",
+        "calendar": "Calendário",
+        "classes": "Turmas"
+      }
+    },
     "pageLanding": {
-      "navbar": {
-        "login": "Entrar",
-        "logon": "Cadastre-se"
-      },
       "firstText": {
         "title": "Entre hoje ",
         "title_": "para a Escola+.",
