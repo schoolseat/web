@@ -13,6 +13,15 @@
     margin-left: 1rem;
     flex-direction: column;
 }
+.profile-user-name-div{
+    display: flex;
+   justify-content: space-between;
+}
+.profile-stars{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
 .profile-user-name{
     color: var(--title_color);
 }
