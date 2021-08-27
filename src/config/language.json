@@ -29,7 +29,9 @@
       "header": {
         "home": "Pagina Inicial",
         "calendar": "Calendário",
-        "classes": "Turmas"
+        "classes": "Turmas",
+        "profile": "Perfil",
+        "sing-out": "Sair"
       }
     },
     "pageLanding": {
