@@ -20,10 +20,13 @@
   color: var(--title-color);
 }
 .header-texts {
+  border: 0;
+  font-size: 1rem;
   margin-left: 1rem;
   text-decoration: none;
   color: var(--text_color);
   transition-duration: 1000s;
+  background-color: transparent;
 }
 .header-texts:hover {
   text-decoration: underline;
@@ -69,9 +72,12 @@
   transition-duration: 1s;
 }
 .header-dropdown-texts{
+    border: 0;
+    font-size: 1rem;
     margin-left: 1rem;
     text-decoration: none;
     color: var(--text_color);
+    background-color: transparent;
 }
 .header-dropdown-texts-div:hover {
   background-color: var(--input-border-color);

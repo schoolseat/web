@@ -1,20 +1,36 @@
 import './styles.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import dayjs from 'dayjs';
+import dayOfYear from 'dayjs/plugin/dayOfYear';
+import { useApi } from '../../hooks/auth';
 import { CalendarCard } from '../../components';
+
+dayjs.extend(dayOfYear);
 
 export default function Calendar() {
   const [showLate, setShowLate] = useState(false);
   const [showWeekly, setShowWeekly] = useState(false);
   const [showMissing, setShowMissing] = useState(false);
+  const [late, setLate] = useState(false);
+  const [weekly, setWeekly] = useState(false);
+  const [missing, setMissing] = useState(false);
 
   const { t } = useTranslation();
+  const { loading, lessons, content } = useApi();
+
   const date = new Date();
+  function formatData() {
+    const lessonsByDays = new Map();
+    lessonsByDays.set('missing', lessons.map((lesson) => dayjs(Date(lesson.deadline)).isBefore(dayjs()) && lesson));
+    lessonsByDays.set('late', lessons.map((lesson) => dayjs(Date(lesson.deadline)).isAfter(dayjs()) && lesson));
+    lessonsByDays.set('weekly', lessons.map((lesson) => dayjs(Date(lesson.deadline)).dayOfYear() === dayjs().dayOfYear() && lesson));
 
-  const activities = [];
-  const content = [];
-
+    setLate(lessonsByDays.get('late'));
+    setWeekly(lessonsByDays.get('weekly'));
+    setMissing(lessonsByDays.get('missing'));
+  }
   function greeting() {
     const hour = date.getHours();
 
@@ -22,7 +38,12 @@ export default function Calendar() {
     if (hour >= 12 && hour < 18) return t('pageCalendar:greetings.afternoon');
     return t('pageCalendar:greetings.evening');
   }
+  useEffect(() => (
+    formatData()
+  ), []);
+  console.log(late, weekly, missing);
 
+  if (loading || lessons) return <p>Carregano</p>;
   return (
     <div className="calendar">
       <body className="calendar-body">
@@ -41,7 +62,7 @@ export default function Calendar() {
             </p>
           </div>
           <p className="calendar-body-header-text">
-            {t('pageCalendar:header', { greeting: greeting(), activity: activities.length, content: content.length })}
+            {t('pageCalendar:header', { greeting: greeting(), activity: lessons.length, content: content.length })}
           </p>
         </div>
         <div className="calendar-selectors-div">

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import './style.css';
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import googleIcon from '../../assets/google-icon.svg';
 import ilustration from '../../assets/ilustration.png';
 import { useApi } from '../../hooks/auth';
@@ -10,14 +10,15 @@ export default function App() {
   const [email, setEmail] = useState(false);
   const [password, setPassword] = useState(false);
 
-  const { getApiData } = useApi();
+  const { getApiData, user } = useApi();
 
   async function handleLogin() {
+    if (!email || !password) return alert('Você precisa informar o e-mail e a senha');
     const login = { email, password };
-
     await getApiData({ login });
-      <Redirect to="/" />;
+    return 0;
   }
+
   return (
     <div id="page-login">
       <aside>
@@ -49,7 +50,9 @@ export default function App() {
               type="button"
               onClick={handleLogin}
             >
-              Login
+              <Link to={user ? '/' : '/login'}>
+                Login
+              </Link>
             </button>
           </form>
           <div className="separator">or</div>

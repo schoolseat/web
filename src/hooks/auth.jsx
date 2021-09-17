@@ -14,8 +14,10 @@ function ApiProvider({ children }) {
 
   async function getApiData({ login }) {
     if (!user) {
-      const { data: userReq } = await api.post('auth', login);
+      const { data: userReq } = await api.post('auth', login).catch(alert('Há algo de errado com seu e-mail ou senha'));
       setUser(userReq);
+      localStorage.setItem('@SchoolSeat/auth_email', login.email);
+      localStorage.setItem('@SchoolSeat/auth_password', login.password);
     }
     const { data: classesReq } = await api.get('classes', {
       headers: {
@@ -64,7 +66,7 @@ function ApiProvider({ children }) {
   return (
     <ApiContext.Provider
       value={{
-        user,
+        user: user.user,
         classes,
         lessons,
         content,

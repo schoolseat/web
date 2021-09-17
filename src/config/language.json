@@ -31,7 +31,7 @@
         "calendar": "Calendário",
         "classes": "Turmas",
         "profile": "Perfil",
-        "sing-out": "Sair"
+        "sign-out": "Sair"
       }
     },
     "pageLanding": {
@@ -108,17 +108,19 @@
   ],
   "navbar": {
     "login": "Log-in",
-    "logon": "Sing-in",
+    "logon": "Sign-in",
     "header": {
       "home": "Home",
       "calendar": "Calendar",
-      "classes": "Classes"
+      "classes": "Classes",
+      "profile": "Profile",
+      "sign-out": "Sign-out"
     }
   },
     "pageLanding": {
       "navbar": {
-        "login": "Login",
-        "logon": "Sing in"
+        "login": "Log-in",
+        "logon": "Sign-in"
       },
       "firstText": {
         "title": "Join in",

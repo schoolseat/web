@@ -5,6 +5,8 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 
+import { useApi } from '../hooks/auth';
+
 import {
   Login,
   SingIn,
@@ -17,6 +19,8 @@ import {
 import { Header } from '../components';
 
 function router() {
+  const { user } = useApi();
+
   return (
     <Router>
       <Switch>
@@ -28,18 +32,24 @@ function router() {
         </Route>
         <Route exact path="/login" component={Login} />
         <Route exact path="/singin" component={SingIn} />
-        <Route exact path="/profile">
+
+        { user
+          && (
           <>
-            <Header />
-            <Profile />
+            <Route exact path="/profile">
+              <>
+                <Header />
+                <Profile />
+              </>
+            </Route>
+            <Route exact path="/calendar">
+              <>
+                <Header />
+                <Calendar />
+              </>
+            </Route>
           </>
-        </Route>
-        <Route exact path="/calendar">
-          <>
-            <Header />
-            <Calendar />
-          </>
-        </Route>
+          )}
         <Route component={NotFound} />
       </Switch>
     </Router>
