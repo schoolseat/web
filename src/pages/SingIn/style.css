@@ -1,8 +1,8 @@
-#page-login {
+#page-signin {
   display: flex;
   align-items: stretch;
 }
-#page-login aside {
+#page-signin aside {
   flex: 6;
   height: 120vh;
   display: flex;
@@ -16,7 +16,7 @@
   width: 40vw;
   height: max-content;
 }
-main {
+#page-signin main {
   flex: 8;
   display: flex;
   padding: 0 32px;

@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+/* eslint-disable no-alert */
 /* eslint-disable react/prop-types */
 import React, { createContext, useContext, useState } from 'react';
 
@@ -12,12 +14,21 @@ function ApiProvider({ children }) {
   const [lessons, setLessons] = useState(false);
   const [content, setContent] = useState(false);
 
-  async function getApiData({ login }) {
+  const authEmail = localStorage.getItem('@SchoolSeat/auth_email');
+  const authPassword = localStorage.getItem('@SchoolSeat/auth_password');
+
+  async function getApiData(login) {
+    localStorage.setItem('@SchoolSeat/auth_email', login.email);
+    localStorage.setItem('@SchoolSeat/auth_password', login.password);
     if (!user) {
-      const { data: userReq } = await api.post('auth', login).catch(alert('Há algo de errado com seu e-mail ou senha'));
+      const { data: userReq } = await api
+        .post('auth', login.email ? login : login.login)
+        .catch((error) => {
+          if (error.response) {
+            alert(`[${error.response.status}] ${error.response.data.error}`);
+          }
+        });
       setUser(userReq);
-      localStorage.setItem('@SchoolSeat/auth_email', login.email);
-      localStorage.setItem('@SchoolSeat/auth_password', login.password);
     }
     const { data: classesReq } = await api.get('classes', {
       headers: {
@@ -40,6 +51,7 @@ function ApiProvider({ children }) {
     });
     setContent(contentReq);
     setLoading(false);
+    return 0;
   }
   async function postApiData({ data, path, isCreateAccount }) {
     if (isCreateAccount) {
@@ -63,6 +75,11 @@ function ApiProvider({ children }) {
     setLoading(false);
     return userReq;
   }
+  function getUser() {
+    const login = { email: authEmail, password: authPassword };
+    if (login.email !== 'undefined' && login.password !== 'undefined') return getApiData(login);
+    return 0;
+  }
   return (
     <ApiContext.Provider
       value={{
@@ -73,6 +90,7 @@ function ApiProvider({ children }) {
         getApiData,
         postApiData,
         getDataById,
+        getUser,
         loading,
       }}
     >

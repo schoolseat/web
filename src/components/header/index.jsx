@@ -19,7 +19,7 @@ export default function Header() {
         { user && (
           <div className="header-texts-divs">
             <div>
-              <Link to="/home" className="header-texts">
+              <Link to="/" className="header-texts">
                 {t('navbar:header.home')}
               </Link>
               <Link to="/calendar" className="header-texts">
@@ -38,7 +38,16 @@ export default function Header() {
                   </Link>
                 </div>
                 <div className="header-dropdown-texts-div">
-                  <a href="/" className="header-dropdown-texts">{t('navbar:header.sing-out')}</a>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      localStorage.setItem('@SchoolSeat/auth_email', 'undefined');
+                      localStorage.setItem('@SchoolSeat/auth_password', 'undefined');
+                    }}
+                    className="header-dropdown-texts"
+                  >
+                    {t('navbar:header.sing-out')}
+                  </button>
                 </div>
               </div>
             </div>

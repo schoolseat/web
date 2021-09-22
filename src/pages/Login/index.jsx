@@ -3,7 +3,7 @@ import './style.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import googleIcon from '../../assets/google-icon.svg';
-import ilustration from '../../assets/ilustration.png';
+import ilustration from '../../assets/loginImg.svg';
 import { useApi } from '../../hooks/auth';
 
 export default function App() {
@@ -22,9 +22,22 @@ export default function App() {
   return (
     <div id="page-login">
       <aside>
+        <Link to="/" className="button-login">
+          <i
+            data-feather="arrow-left"
+            style={{
+              top: 25,
+              left: 25,
+              position: 'absolute',
+            }}
+            color="white"
+            width={35}
+            height={35}
+          />
+        </Link>
         <img
           src={ilustration}
-          className="image"
+          className="page-login-image"
           alt="Illustration of a boy writing"
         />
       </aside>
@@ -50,7 +63,7 @@ export default function App() {
               type="button"
               onClick={handleLogin}
             >
-              <Link to={user ? '/' : '/login'}>
+              <Link to={user ? '/' : '/login'} className="button-login">
                 Login
               </Link>
             </button>

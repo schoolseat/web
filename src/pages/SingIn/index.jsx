@@ -3,7 +3,7 @@ import './style.css';
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import googleIcon from '../../assets/google-icon.svg';
-import ilustration from '../../assets/ilustration.png';
+import ilustration from '../../assets/signinImg.svg';
 import { useApi } from '../../hooks/auth';
 
 export default function App() {

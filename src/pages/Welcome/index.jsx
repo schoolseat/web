@@ -1,18 +1,23 @@
 import './styles.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useApi } from '../../hooks/auth';
 import { Button } from '../../components';
-import box1 from '../../assets/box1.png';
+
+import box1 from '../../assets/box1.svg';
 import box2 from '../../assets/box2.png';
-import box3 from '../../assets/box3.png';
-import box4 from '../../assets/box4.png';
-import Layer1 from '../../assets/Layer1.png';
-import Layer2 from '../../assets/Layer2.png';
+import box3 from '../../assets/box3.svg';
+import box4 from '../../assets/box4.svg';
+import Layer1 from '../../assets/Layer1.svg';
+import Layer2 from '../../assets/Layer2.svg';
 
 function App() {
+  const { getUser } = useApi();
   const { t } = useTranslation();
-
+  useEffect(() => {
+    getUser();
+  }, []);
   return (
     <div className="App">
       <div className="PageLanding-first-div">

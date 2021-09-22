@@ -43,7 +43,7 @@ export default function Calendar() {
   ), []);
   console.log(late, weekly, missing);
 
-  if (loading || lessons) return <p>Carregano</p>;
+  if (loading || !lessons) return <p>Carregano</p>;
   return (
     <div className="calendar">
       <body className="calendar-body">
@@ -68,8 +68,13 @@ export default function Calendar() {
         <div className="calendar-selectors-div">
           <div className="calendar-selectors">
             <p className="calendar-selectors-titles">{t('pageCalendar:selectors.missing')}</p>
-            <button className="calendar-invisible-buttons" type="button" onClick={() => setShowMissing(!showMissing)}>
-              <i data-feather="chevrons-down" />
+            <button className="calendar-invisible-buttons" type="button" aria-label="missing" onClick={() => setShowMissing(!showMissing)}>
+              <i
+                data-feather="chevrons-down"
+                color="#4b5d68"
+                width={35}
+                height={35}
+              />
             </button>
           </div>
           {
@@ -77,8 +82,13 @@ export default function Calendar() {
           }
           <div className="calendar-selectors">
             <p className="calendar-selectors-titles">{t('pageCalendar:selectors.weekly')}</p>
-            <button className="calendar-invisible-buttons" type="button" onClick={() => setShowWeekly(!showWeekly)}>
-              <i data-feather="chevrons-down" />
+            <button className="calendar-invisible-buttons" type="button" aria-label="weekly" onClick={() => setShowWeekly(!showWeekly)}>
+              <i
+                data-feather="chevrons-down"
+                color="#4b5d68"
+                width={35}
+                height={35}
+              />
             </button>
           </div>
           {
@@ -86,8 +96,13 @@ export default function Calendar() {
           }
           <div className="calendar-selectors">
             <p className="calendar-selectors-titles">{t('pageCalendar:selectors.later')}</p>
-            <button className="calendar-invisible-buttons" type="button" onClick={() => setShowLate(!showLate)}>
-              <i data-feather="chevrons-down" />
+            <button className="calendar-invisible-buttons" type="button" aria-label="later" onClick={() => setShowLate(!showLate)}>
+              <i
+                data-feather="chevrons-down"
+                color="#4b5d68"
+                width={35}
+                height={35}
+              />
             </button>
           </div>
           {
