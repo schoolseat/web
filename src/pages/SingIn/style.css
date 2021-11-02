@@ -4,16 +4,16 @@
 }
 #page-signin aside {
   flex: 6;
-  height: 120vh;
+  height: auto;
   display: flex;
   padding: 120px 80px;
   flex-direction: column;
   justify-content: center;
   background: var(--purple);
 }
-
 .image {
   width: 40vw;
+  margin-top: -10rem;
   height: max-content;
 }
 #page-signin main {
@@ -26,9 +26,6 @@
 .main-content {
   width: 100%;
   display: flex;
-  max-width: 320px;
-  margin-top: 20rem;
-  align-items: stretch;
   flex-direction: column;
 }
 .main-content > img {
@@ -105,6 +102,7 @@
 }
 
 .button-google {
+  margin-bottom: 5rem;
   color: var(--white);
   background: var(--red);
 }

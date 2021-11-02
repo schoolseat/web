@@ -20,16 +20,9 @@ function ApiProvider({ children }) {
   async function getApiData(login) {
     localStorage.setItem('@SchoolSeat/auth_email', login.email);
     localStorage.setItem('@SchoolSeat/auth_password', login.password);
-    if (!user) {
-      const { data: userReq } = await api
-        .post('auth', login.email ? login : login.login)
-        .catch((error) => {
-          if (error.response) {
-            alert(`[${error.response.status}] ${error.response.data.error}`);
-          }
-        });
-      setUser(userReq);
-    }
+
+    const userReq = await api.post('auth', login).catch((error) => (error.response ? alert(error.response.data.message) : alert('Aconteçeu um erro, tente novamente mais tarde')));
+    setUser(userReq);
     const { data: classesReq } = await api.get('classes', {
       headers: {
         'x-access-token': user.token,
@@ -55,10 +48,10 @@ function ApiProvider({ children }) {
   }
   async function postApiData({ data, path, isCreateAccount }) {
     if (isCreateAccount) {
-      const { data: userReq } = await api.post('users', data);
+      const createAccountReq = await api.post('users', data).catch((error) => alert(error.response.data.message));
 
       setLoading(false);
-      setUser(userReq);
+      setUser(createAccountReq.data);
     }
     setLoading(false);
     const contentPost = await api.post(path, data, {
@@ -76,9 +69,9 @@ function ApiProvider({ children }) {
     return userReq;
   }
   function getUser() {
-    const login = { email: authEmail, password: authPassword };
-    if (login.email !== 'undefined' && login.password !== 'undefined') return getApiData(login);
-    return 0;
+    if (!authEmail === 'false' && !authPassword === 'false') {
+      return getApiData({ email: authEmail, password: authPassword });
+    }
   }
   return (
     <ApiContext.Provider

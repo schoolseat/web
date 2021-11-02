@@ -12,7 +12,8 @@
     opacity: 0.7;
 }
 .buttonComponentText{
-    color: var(--buton_color);
-
+    font-size: 1rem;
     font-family: Baloo;
+    color: var(--buton_color);
+    font-weight: var(--fonts-heading);
 }

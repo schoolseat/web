@@ -1,40 +1,33 @@
+/* eslint-disable consistent-return */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import './style.css';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import googleIcon from '../../assets/google-icon.svg';
+import { useHistory } from 'react-router-dom';
+
 import ilustration from '../../assets/loginImg.svg';
+import googleIcon from '../../assets/google-icon.svg';
+
 import { useApi } from '../../hooks/auth';
+import { BackButton } from '../../components';
 
 export default function App() {
   const [email, setEmail] = useState(false);
   const [password, setPassword] = useState(false);
 
-  const { getApiData, user } = useApi();
+  const { getApiData } = useApi();
+  const navigate = useHistory();
 
   async function handleLogin() {
     if (!email || !password) return alert('Você precisa informar o e-mail e a senha');
     const login = { email, password };
-    await getApiData({ login });
-    return 0;
+    await getApiData(login);
+    navigate.push('/');
   }
 
   return (
     <div id="page-login">
       <aside>
-        <Link to="/" className="button-login">
-          <i
-            data-feather="arrow-left"
-            style={{
-              top: 25,
-              left: 25,
-              position: 'absolute',
-            }}
-            color="white"
-            width={35}
-            height={35}
-          />
-        </Link>
+        <BackButton />
         <img
           src={ilustration}
           className="page-login-image"
@@ -43,6 +36,7 @@ export default function App() {
       </aside>
       <main>
         <div className="main-content">
+          <h1>Login</h1>
           <form onSubmit={handleLogin}>
             <label htmlFor="email">Email</label>
             <input
@@ -63,9 +57,7 @@ export default function App() {
               type="button"
               onClick={handleLogin}
             >
-              <Link to={user ? '/' : '/login'} className="button-login">
-                Login
-              </Link>
+              Login
             </button>
           </form>
           <div className="separator">or</div>
