@@ -1,0 +1,15 @@
+.ClassesCard{
+    width: 15rem;
+    display: flex;
+    padding: 0 2rem;
+    border-radius: 20px;
+    color: var(--white);
+    flex-direction: row;
+    background-color: var(--green);
+}
+.ClassesCard-title{
+    color: var(--white);
+}
+.ClassesCard-students-number{
+    font-weight: var(--fonts-heading);
+}

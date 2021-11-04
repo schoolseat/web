@@ -1,0 +1,16 @@
+.ClassesPage-div{
+    display: flex;
+    padding: 0 2rem;
+    flex-direction: row;
+}
+.ClassesPage-title {
+    font-size: 2rem;
+    margin-top: 3rem;
+    font-weight: var(--fonts-heading);
+}
+.ClassesPage-img{
+    width: 16rem;
+    height: 20rem;
+    margin-right: 5rem;
+    margin-left: 10rem;
+}

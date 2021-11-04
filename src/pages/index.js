@@ -4,6 +4,7 @@ import Login from './Login';
 import SignIn from './SignIn';
 import Calendar from './Calendar';
 import Profile from './Profile';
+import ClassesPage from './Classes';
 
 export {
   Login,
@@ -12,4 +13,5 @@ export {
   Profile,
   Calendar,
   NotFound,
+  ClassesPage,
 };

@@ -14,6 +14,7 @@ import {
   Welcome,
   Calendar,
   NotFound,
+  ClassesPage,
 } from './index';
 
 import { Header } from '../components';
@@ -46,6 +47,12 @@ function router() {
               <>
                 <Header />
                 <Calendar />
+              </>
+            </Route>
+            <Route exact path="/classes">
+              <>
+                <Header />
+                <ClassesPage />
               </>
             </Route>
           </>
