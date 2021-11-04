@@ -41,6 +41,9 @@
   text-align: center;
   align-items: center;
 }
+.header-texts-texts-divs{
+  width: 20rem;
+}
 .header-texts-divs{
   display: flex;
   text-align: center;

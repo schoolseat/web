@@ -19,13 +19,14 @@ export default function Header() {
   useEffect(() => {
     handleState();
   }, [user]);
+
   return (
     <div className="header-container">
       <div className="header-subcontainer">
         <h1 className="header-title">SchoolSeat</h1>
         { !showLogin && (
           <div className="header-texts-divs">
-            <div>
+            <div className="header-texts-texts-divs">
               <Link to="/" className="header-texts">
                 {t('navbar:header.home')}
               </Link>
