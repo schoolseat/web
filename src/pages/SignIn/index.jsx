@@ -1,8 +1,12 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable consistent-return */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import './style.css';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import ImageUploading from 'react-images-uploading';
 
 import ilustration from '../../assets/signinImg.svg';
 import googleIcon from '../../assets/google-icon.svg';
@@ -22,6 +26,9 @@ export default function App() {
   const { postApiData } = useApi();
   const navigate = useHistory();
 
+  const onChange = (imageList, addUpdateIndex) => {
+    setProfilePic(imageList[0].data_url);
+  };
   async function handleSingIn() {
     if (!name) return alert('Você precisa inserir o seu nome');
     if (!email) return alert('Você precisa inserir o seu email');
@@ -29,12 +36,8 @@ export default function App() {
     if (!bornDate) return alert('Você precisa inserir o sua data de nascimento');
 
     const data = {
-      bio: ' ',
       name,
-      xp: 0,
       email,
-      stars: 0,
-      level: 0,
       bornDate,
       nickname,
       password,
@@ -103,12 +106,29 @@ export default function App() {
               max={`${new Date().getFullYear() - 5}-01-01`}
               onChange={(data) => setBornDate(data.target.value)}
             />
-            <label htmlFor="profilePic">Profile Pic</label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={(data) => setProfilePic(data.target.value)}
-            />
+            <ImageUploading
+              value={profilePic}
+              onChange={onChange}
+              dataURLKey="data_url"
+            >
+              {({
+                dragProps,
+                imageList,
+                onImageUpload,
+              }) => (
+                // write your building UI
+                <div className="upload__image-wrapper">
+                  <label htmlFor="profilePic">Profile Pic</label>
+                  <input
+                    type="button"
+                    {...dragProps}
+                    onClick={onImageUpload}
+                    value={imageList ? 'Selecionar outra foto' : 'Arraste ou Selecione uma foto'}
+                  />
+                  { imageList && <img src={imageList} alt="" width="100" />}
+                </div>
+              )}
+            </ImageUploading>
             <button
               type="button"
               onClick={handleSingIn}

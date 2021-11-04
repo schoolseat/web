@@ -24,9 +24,9 @@ function ApiProvider({ children }) {
     const { data: userReq } = await api
       .post('auth', login)
       .catch((error) => (error.response
-        ? alert(error.response.data.message)
-        : alert('Aconteçeu um erro, tente novamente mais tarde')));
-    console.log(userReq);
+        ? (alert(error.response.data.message) && console.log(error))
+        : alert('Aconteçeu um erro, tente novamente mais tarde') && console.log(error)));
+
     setUser(userReq);
     const { data: classesReq } = await api.get('classes', {
       headers: {
@@ -52,10 +52,11 @@ function ApiProvider({ children }) {
     return 0;
   }
   async function postApiData({ data, path, isCreateAccount }) {
+    console.log(data);
     if (isCreateAccount) {
       await api
         .post('users', data)
-        .catch((error) => alert(error.response.data.message));
+        .catch((error) => alert(error.response.data.message) && console.log(error));
       const login = { email: data.email, password: data.password };
       return getApiData(login);
     }
