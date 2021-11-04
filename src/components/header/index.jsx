@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 
 import { Link } from 'react-router-dom';
@@ -9,14 +9,21 @@ import HeaderButton from '../headerButton';
 import { useApi } from '../../hooks/auth';
 
 export default function Header() {
+  const [showLogin, setShowLogin] = useState(true);
   const { user } = useApi();
   const { t } = useTranslation();
 
+  function handleState() {
+    setShowLogin(!user);
+  }
+  useEffect(() => {
+    handleState();
+  }, [user]);
   return (
     <div className="header-container">
       <div className="header-subcontainer">
         <h1 className="header-title">SchoolSeat</h1>
-        { user && (
+        { !showLogin && (
           <div className="header-texts-divs">
             <div>
               <Link to="/" className="header-texts">
@@ -54,10 +61,10 @@ export default function Header() {
           </div>
         )}
       </div>
-      { !user && (
+      { showLogin && (
         <div className="header-subcontainer">
           <div className="buttons">
-            <HeaderButton title={`${t('navbar:logon')}`} href="/singin" />
+            <HeaderButton title={`${t('navbar:logon')}`} href="/signin" />
           </div>
           <div className="buttons">
             <HeaderButton title={`${t('navbar:login')}`} isPurple href="/login" />

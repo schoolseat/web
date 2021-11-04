@@ -9,7 +9,7 @@ import { useApi } from '../hooks/auth';
 
 import {
   Login,
-  SingIn,
+  SignIn,
   Profile,
   Welcome,
   Calendar,
@@ -31,7 +31,7 @@ function router() {
           </>
         </Route>
         <Route exact path="/login" component={Login} />
-        <Route exact path="/singin" component={SingIn} />
+        <Route exact path="/signin" component={SignIn} />
 
         { user
           && (

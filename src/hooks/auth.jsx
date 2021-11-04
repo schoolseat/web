@@ -48,10 +48,9 @@ function ApiProvider({ children }) {
   }
   async function postApiData({ data, path, isCreateAccount }) {
     if (isCreateAccount) {
-      const createAccountReq = await api.post('users', data).catch((error) => alert(error.response.data.message));
-
-      setLoading(false);
-      setUser(createAccountReq.data);
+      await api.post('users', data).catch((error) => alert(error.response.data.message));
+      const login = { email: data.email, password: data.password };
+      return getApiData(login);
     }
     setLoading(false);
     const contentPost = await api.post(path, data, {

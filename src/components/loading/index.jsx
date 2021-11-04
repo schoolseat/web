@@ -4,7 +4,7 @@ import './styles.css';
 export default function Loading() {
   return (
     <div>
-      <p className="loading-title">Escola +</p>
+      <p className="loading-title">SchoolSeat</p>
     </div>
   );
 }
