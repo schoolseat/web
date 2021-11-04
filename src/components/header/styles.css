@@ -55,6 +55,9 @@
   display: inline-block;
   margin-left: 55vw;
 }
+.header-texts-texts-dropdown {
+  display: none;
+}
 .dropdown-content {
   right: 0;
   width: 10rem;
@@ -88,4 +91,105 @@
 .dropdown:hover .dropdown-content {
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 1030px) {
+  .header-container {
+    display: flex;
+    padding: 0 1rem;
+    text-align: center; 
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid var(--header-border);
+  }
+  .dropdown {
+    left: 40%;
+    margin-left: auto;
+    position: relative;
+    display: inline-block;
+  }
+  .buttons {
+    text-align: center;
+    align-items: center;
+  }
+  .header-texts-divs{
+    width: 30rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  .header-texts {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--text_color);
+    transition-duration: 1000s;
+    background-color: transparent;
+    font-weight: var(--fonts-text);
+  }
+}
+@media screen and (max-width: 880px) {
+  .dropdown {
+    left: 30%;
+    margin-left: auto;
+    position: relative;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 830px) {
+  .dropdown {
+    left: 20%;
+    margin-left: auto;
+    position: relative;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 780px) {
+  .dropdown {
+    left: 10%;
+    margin-left: auto;
+    position: relative;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 740px) {
+  .header-container {
+    display: flex;
+    text-align: center; 
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--header-border);
+  }
+  .dropdown {
+    margin-left: 0;
+    margin-right: auto;
+    position: relative;
+    display: inline-block;
+  }
+  .header-subcontainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .header-texts-texts-divs{
+    display: none;
+  }
+  .header-texts-texts-dropdown {
+    display: flex;
+    margin-left: 22rem;
+    align-self: center;
+  }
+  .buttons {
+    margin-bottom: 1rem;
+  }
+  .header-texts-divs:hover 
+    .header-texts-texts-divs {
+      display: flex;
+      width: 10rem;
+      display: flex;
+      position: fixed;
+      padding: 12px 16px;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: var(--background_color);
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
 }

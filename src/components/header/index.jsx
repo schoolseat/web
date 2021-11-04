@@ -1,9 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { AlignJustify } from 'react-feather';
 
 import HeaderButton from '../headerButton';
 import { useApi } from '../../hooks/auth';
@@ -26,6 +28,11 @@ export default function Header() {
         <h1 className="header-title">SchoolSeat</h1>
         { !showLogin && (
           <div className="header-texts-divs">
+            <AlignJustify
+              size={35}
+              color="black"
+              className="header-texts-texts-dropdown"
+            />
             <div className="header-texts-texts-divs">
               <Link to="/" className="header-texts">
                 {t('navbar:header.home')}
