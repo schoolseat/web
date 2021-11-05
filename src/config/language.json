@@ -31,7 +31,8 @@
         "calendar": "Calendário",
         "classes": "Turmas",
         "profile": "Perfil",
-        "sign-out": "Sair"
+        "signOut": "Sair",
+        "createClass": "Criar turma"
       }
     },
     "pageLanding": {

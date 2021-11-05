@@ -28,6 +28,15 @@
   transition-duration: 1000s;
   background-color: transparent;
 }
+.header-texts-selected {
+  border: 0;
+  font-size: 1rem;
+  margin-left: 1rem;
+  text-decoration: underline;
+  color: var(--text_color);
+  transition-duration: 1000s;
+  background-color: transparent;
+}
 .header-texts:hover {
   text-decoration: underline;
 }
@@ -80,13 +89,12 @@
 .header-dropdown-texts{
     border: 0;
     font-size: 1rem;
-    margin-left: 1rem;
     text-decoration: none;
     color: var(--text_color);
     background-color: transparent;
 }
-.header-dropdown-texts-div:hover {
-  background-color: var(--input-border-color);
+.header-dropdown-texts:hover {
+  text-decoration: underline;
 }
 .dropdown:hover .dropdown-content {
   display: flex;

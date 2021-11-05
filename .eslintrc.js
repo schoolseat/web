@@ -18,5 +18,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    noConsole: 'off',
+    noAlert: 'off',
   },
 };

@@ -1,0 +1,37 @@
+.createclass {
+    height: 51.5vh;
+    display: flex;
+    text-align: center;
+}
+.createclass aside {
+    height: 100%;
+    display: flex;
+    padding: 120px 80px;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--green);
+}
+.createclass main {
+    padding: 0 10rem;
+    text-align: center;
+    align-items: center;
+}
+.createclass-inputs-divs{
+    width: 25rem;
+}
+.createclass-titles{
+    font-size: 1.5rem;
+    align-self: center;
+    font-weight: var(--fonts-text);
+}
+.createclass-inputs{
+    border: 0;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    border-bottom: 1px solid var(--header-border); 
+}
+.createclass-button{
+    margin-top: 2rem;
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+.grade{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+.grade-discipline{
+    font-size: 2rem;
+    font-weight: var(--fonts-heading);
+}
+.grade-teacher{
+    display: flex;
+    margin-top: -1rem;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+.grade-teacher-pfp{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+}
+.grade-teacher-name{
+    margin-left: 1rem;
+}
+.grade-school{
+    margin-right: 2rem;
+}
+.grade-bio-div{
+    margin-left: auto;
+}

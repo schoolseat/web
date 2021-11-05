@@ -8,6 +8,7 @@ import {
 import { useApi } from '../hooks/auth';
 
 import {
+  Grade,
   Login,
   SignIn,
   Profile,
@@ -15,6 +16,7 @@ import {
   Calendar,
   NotFound,
   ClassesPage,
+  CreateClass,
 } from './index';
 
 import { Header } from '../components';
@@ -41,6 +43,18 @@ function router() {
               <>
                 <Header />
                 <Profile />
+              </>
+            </Route>
+            <Route exact path="/grade">
+              <>
+                <Header />
+                <Grade />
+              </>
+            </Route>
+            <Route exact path="/createclass">
+              <>
+                <Header />
+                <CreateClass />
               </>
             </Route>
             <Route exact path="/calendar">

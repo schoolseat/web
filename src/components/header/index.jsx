@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AlignJustify } from 'react-feather';
 
@@ -34,34 +34,60 @@ export default function Header() {
               className="header-texts-texts-dropdown"
             />
             <div className="header-texts-texts-divs">
-              <Link to="/" className="header-texts">
+              <NavLink
+                to="/"
+                className="header-texts"
+                activeStyle={{
+                  fontWeight: 'bold',
+                }}
+              >
                 {t('navbar:header.home')}
-              </Link>
-              <Link to="/calendar" className="header-texts">
+              </NavLink>
+              <NavLink
+                to="/calendar"
+                className="header-texts"
+                activeStyle={{
+                  fontWeight: 'bold',
+                }}
+              >
                 {t('navbar:header.calendar')}
-              </Link>
-              <Link to="/classes" className="header-texts">
+              </NavLink>
+              <NavLink
+                to="/classes"
+                className="header-texts"
+                activeStyle={{
+                  fontWeight: 'bold',
+                }}
+              >
                 {t('navbar:header.classes')}
-              </Link>
+              </NavLink>
             </div>
             <div className="dropdown">
               <img className="header-pfp" src={user.profilePic} alt="profilePic" />
               <div className="dropdown-content">
                 <div className="header-dropdown-texts-div">
-                  <Link to="/profile" className="header-dropdown-texts">
-                    {t('navbar:header.profile')}
-                  </Link>
+                  <div>
+                    <Link to="/profile" className="header-dropdown-texts">
+                      {t('navbar:header.profile')}
+                    </Link>
+                  </div>
+                  <div>
+                    <Link to="/createclass" className="header-dropdown-texts">
+                      {t('navbar:header.createClass')}
+                    </Link>
+                  </div>
                 </div>
                 <div className="header-dropdown-texts-div">
                   <button
                     type="button"
                     onClick={() => {
+                      window.location.reload();
                       localStorage.setItem('@SchoolSeat/auth_email', 'undefined');
                       localStorage.setItem('@SchoolSeat/auth_password', 'undefined');
                     }}
                     className="header-dropdown-texts"
                   >
-                    {t('navbar:header.sing-out')}
+                    {t('navbar:header.signOut')}
                   </button>
                 </div>
               </div>
