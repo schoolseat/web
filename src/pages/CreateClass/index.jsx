@@ -15,7 +15,7 @@ export default function CreateClass() {
   const [schoolName, setSchoolName] = useState(false);
 
   const navigation = useHistory();
-  const { /* postApiData, */ user } = useApi();
+  const { postApiData, user } = useApi();
 
   async function handleClassSelect() {
     if (!className) return alert('Você precisa inserir o nome da turma');
@@ -31,8 +31,8 @@ export default function CreateClass() {
       discipline: className,
     };
 
-    // const { data } = await postApiData({ data: parsedPostData, path: 'classes' });
-    return navigation.push('/grade', { parsedPostData });
+    const { data } = await postApiData({ data: parsedPostData, path: 'classes' });
+    return navigation.push('/grade', { data });
   }
   return (
     <div className="createclass">

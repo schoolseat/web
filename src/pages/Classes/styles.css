@@ -1,6 +1,8 @@
+.ClassesPage{
+    padding: 0 2rem;
+}
 .ClassesPage-div{
     display: flex;
-    padding: 0 2rem;
     flex-direction: row;
 }
 .ClassesPage-title {
@@ -13,4 +15,8 @@
     height: 20rem;
     margin-right: 5rem;
     margin-left: 10rem;
+}
+.ClassesPage-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }

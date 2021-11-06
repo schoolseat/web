@@ -21,13 +21,13 @@ function ApiProvider({ children }) {
     localStorage.setItem('@SchoolSeat/auth_email', login.email);
     localStorage.setItem('@SchoolSeat/auth_password', login.password);
 
-    const { data: userReq } = await api
-      .post('auth', login)
-      .catch((error) => (error.response
-        ? (alert(error.response.data.message) && console.log(error))
-        : alert('Aconteçeu um erro, tente novamente mais tarde') && console.log(error)));
+    const userReq = await api.post('auth', login)
+      .catch((error) => (error.response.data.error
+        ? alert(error.response.data.error)
+        : alert('Parece que seu e-mail ou senha estão errados')));
 
-    setUser(userReq);
+    if (!userReq) return;
+    setUser(userReq.data);
     const { data: classesReq } = await api.get('classes', {
       headers: {
         'x-access-token': user.token,
@@ -52,11 +52,10 @@ function ApiProvider({ children }) {
     return 0;
   }
   async function postApiData({ data, path, isCreateAccount }) {
-    console.log(data);
     if (isCreateAccount) {
       await api
         .post('users', data)
-        .catch((error) => alert(error.response.data.message) && console.log(error));
+        .catch((error) => alert(error.response.data.message));
       const login = { email: data.email, password: data.password };
       return getApiData(login);
     }
